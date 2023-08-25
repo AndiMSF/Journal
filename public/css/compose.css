@@ -1,0 +1,175 @@
+
+body{
+    font-family: 'Montserrat-Black', sans-serif;
+    text-align: center;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat-Black', sans-serif;
+}
+
+.container-fluid{
+    padding: 5% 5%
+}
+
+.container-fluid.layerPost{
+    padding: 0%;
+}
+
+.berwarna{
+    background-color: #2682ec;
+}
+
+.tidakberwarna{
+    background-color: #fff;
+    margin-bottom:0;
+}
+
+.tidakberwarna.post{
+    background-color: #fff;
+    text-align: left;
+}
+
+section.post {
+    height: 100vh;
+}
+
+/* Title  */
+#title{
+    color:#fff;
+
+}
+
+#title .container-fluid{
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+
+.title-text{
+    font-size: 2.5rem;
+    line-height: 1.5;
+    text-align: left;
+    color: #03234944;
+}
+
+.journal {
+    text-decoration: underline;
+    display: block;
+    width: 100%;
+    font-size: 3rem;
+}
+
+form h1 {
+    font-size: 1.5rem;
+}
+
+form {
+    padding-top: 3rem;
+}
+/* Navigation Bar */
+
+.navbar{
+    padding-bottom:2rem;
+    padding-top: 2rem;
+}
+
+.navbar-brand{
+    font-family: 'Ubuntu',sans-serif;
+    font-size:2.5rem;
+    font-weight: bold;
+}
+
+.nav-item{
+    padding: 0 18px;
+}
+
+.nav-link{
+    font-family: 'Montserrat-Light', sans-serif;
+    font-size:1.2rem;
+    
+}
+
+/* Download Button */
+
+.btn{
+    margin-bottom:3%;
+    float: right;
+}
+
+/* Title Image */
+
+.title-image{
+    width:30%;
+    position: absolute;
+    right:15%;
+}
+
+
+/* Features */
+
+#features{  
+    position:relative;
+}
+
+.compose{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.compose:hover{
+    color:#ffffff; 
+    text-decoration:none; 
+    cursor:pointer; 
+}
+.feature-box{
+    padding:5%; 
+}
+
+.features-h3{
+    font-weight: bold;
+    font-size:1.5rem;
+}
+
+p{  
+    font-family: 'Montserrat', sans-serif;
+    color:#8f8f8f;
+}
+
+.logo{
+    position: relative;
+    padding-bottom:1rem;
+}
+
+.feature-logo{
+    color:#2682ec;
+    margin-bottom:1rem;
+}
+
+.feature-logo:hover{
+    color:#074d9d;
+    cursor:grab
+}
+
+
+/* Footer */
+.footer-icon{
+    padding-top:2.5rem;
+    padding-bottom:1rem;
+}
+
+.fa-icon{
+    padding:0 1rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#00A0C6; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
