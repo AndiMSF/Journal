@@ -114,6 +114,7 @@ a:hover {
 {   
    #title{
     text-align: center;
+    height: 100%;
    }
     .title-image{
         position: static;
