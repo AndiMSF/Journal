@@ -8,15 +8,13 @@ const post = async (req, res) => {
         const user = await User.findById(userId)
 
         if (!user) {
-            console.log("User not found!");
-            return
+            return res.status(404).json({ error: "User not found!" })
         }
 
         const foundPost = user.posts.find(post => postId == post._id)
 
         if (!foundPost) {
-            console.log("Post not found!");
-            return
+            return res.status(404).json({ error: "Post not found!" })   
         }
 
         res.render("post", {title: foundPost.title, description: foundPost.description, post: foundPost })

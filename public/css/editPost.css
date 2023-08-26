@@ -1,3 +1,4 @@
+
 body{
     font-family: 'Montserrat-Black', sans-serif;
     text-align: center;
@@ -45,12 +46,12 @@ section.post {
     padding-bottom: 0%;
 }
 
+
 .title-text{
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     line-height: 1.5;
     text-align: left;
     color: #03234944;
-    margin-bottom: 1rem;
 }
 
 .journal {
@@ -94,6 +95,7 @@ form {
 
 .btn{
     margin-bottom:3%;
+    float: right;
 }
 
 /* Title Image */
@@ -147,7 +149,7 @@ p{
 
 .feature-logo:hover{
     color:#074d9d;
-    cursor:grab;
+    cursor:grab
 }
 
 .fa-pencil-square-o {

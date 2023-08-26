@@ -78,17 +78,21 @@
       <div class="container-fluid layerPost">
         <div class="row">
           <div class="feature-box col-md-8 col-lg-12">
-            <h1 class="title-text">Click compose on top right corner to make a post...</h1>
+            <h1 class="title-text">
+              Click compose on top right corner to make a post...
+            </h1>
             <% posts.forEach(function(post){ %>
+            <a href="/edit/<%=post._id%>"
+              ><i class="fa fa-pencil-square-o" aria-hidden="true"></i
+            ></a>
+            <h1><%=post.title%></h1>
 
-              <h1><%=post.title%></h1>
+            <p>
+              <%=post.description.substring(0, 400) + " ..."%>
+              <a href="/posts/<%=post._id%>">Read More</a>
+            </p>
+            <input type="hidden" name="postName" />
 
-              <p>
-                <%=post.description.substring(0, 400) + " ..."%>
-                <a href="/posts/<%=post._id%>">Read More</a>
-              </p>
-              <input type="hidden" name="postName" />
-            
             <% }) %>
           </div>
         </div>

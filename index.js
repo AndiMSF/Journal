@@ -17,6 +17,7 @@ const journalRoutes = require("./routes/journal.js")
 const composeRoutes = require("./routes/compose.js")
 const postRoutes = require("./routes/post.js")
 const deleteRoutes = require("./routes/delete.js")
+const editRoutes = require("./routes/edit.js")
 
 // Configuration
 const app = express()
@@ -77,3 +78,4 @@ app.use("/journal", journalRoutes)
 app.use("/posts", postRoutes)
 app.use("/compose", composeRoutes)
 app.use("/delete", deleteRoutes)
+app.use("/edit", editRoutes)
