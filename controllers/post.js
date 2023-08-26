@@ -19,7 +19,7 @@ const post = async (req, res) => {
             return
         }
 
-        res.render("post", {title: foundPost.title, description: foundPost.description })
+        res.render("post", {title: foundPost.title, description: foundPost.description, post: foundPost })
     } catch (err) {
         res.status(404).json({ error: err.message })
     }

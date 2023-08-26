@@ -45,11 +45,12 @@ section.post {
     padding-bottom: 0%;
 }
 
-
 .title-text{
-    font-size: 3.5rem;
+    font-size: 1.75rem;
     line-height: 1.5;
     text-align: left;
+    color: #03234944;
+    margin-bottom: 1rem;
 }
 
 .journal {

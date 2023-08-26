@@ -78,16 +78,8 @@
       <div class="container-fluid layerPost">
         <div class="row">
           <div class="feature-box col-md-8 col-lg-12">
+            <h1 class="title-text">Click compose on top right corner to make a post...</h1>
             <% posts.forEach(function(post){ %>
-
-            <form action="/delete" method="post">
-              <input
-                type="checkbox"
-                name="checkbox"
-                value="<%= post._id %>"
-                onChange="this.form.submit()"
-              />
-              Remove
 
               <h1><%=post.title%></h1>
 
@@ -96,7 +88,7 @@
                 <a href="/posts/<%=post._id%>">Read More</a>
               </p>
               <input type="hidden" name="postName" />
-            </form>
+            
             <% }) %>
           </div>
         </div>

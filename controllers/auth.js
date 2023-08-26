@@ -25,7 +25,8 @@ const register = async (req, res) => {
         console.log(savedUser);
         res.redirect("/auth/login")
     } catch (err) {
-        res.status(500).json({ error: err.message })
+        req.flash("message", "Duplicate email / password < 6 characters")
+        res.redirect("/auth/register")
     }
 }
 
@@ -42,11 +43,17 @@ const login = async (req, res) => {
 
         // let's search a user in database by an email...
         const user = await User.findOne({ email: email })
-        if (!user) return res.status(400).json({ msg: "User doesn't exist" })
+        if (!user)  {
+            req.flash("message", "User doesn't Exist")
+            return res.redirect("/auth/login")
+        }
 
         // Check if password that sent in frontend is equal to hashed password in database
         const checkHashPassword = await bcrypt.compare(password, user.password)
-        if (!checkHashPassword) return res.status(400).json({ msg: "Wrong Username / Password" })
+        if (!checkHashPassword) {
+            req.flash("message", "Wrong email / password")
+            return res.redirect("/auth/login")
+        }
         // Then we give the user a password
         const token = jwt.sign({ id:user._id }, process.env.JWT_SECRET, {
             expiresIn: maxAge
@@ -58,7 +65,8 @@ const login = async (req, res) => {
         delete user.password
         res.redirect("/userhome")
     } catch (err) {
-        res.status(500).json({ error: err.message })
+        req.flash("message", err.message)
+        res.redirect("/auth/login")
     } 
 }
 

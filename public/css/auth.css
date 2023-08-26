@@ -39,7 +39,7 @@ label {
 }
 input {
 	width: 60%;
-	height: 20px;
+	height: 40px;
 	background: #e0dede;
 	justify-content: center;
 	display: flex;
@@ -48,7 +48,37 @@ input {
 	border: none;
 	outline: none;
 	border-radius: 5px;
+	margin-bottom: 0;
 }
+
+.alert {
+	margin: 0 auto;
+	padding: 0;
+	width: 60%;
+	display: flex;
+	justify-content: center;
+}
+
+span {
+	margin: 0 auto;
+	padding-top: 5px;
+	padding-left: 8px;
+	width: 60%;
+	display: block;
+	color: #e0dede;
+	font-size: 0.8rem;
+}
+
+.login-span {
+	margin: 0 auto;
+	padding-top: 5px;
+	padding-left: 8px;
+	width: 60%;
+	display: block;
+	color: #484646;
+	font-size: 0.8rem;
+}
+
 button {
 	width: 60%;
 	height: 40px;

@@ -64,6 +64,7 @@ section.post {
 
 .title-post {
     text-align: center;
+    margin-bottom: 5rem;
 }
 
 .title-description
@@ -165,6 +166,22 @@ p{
     cursor:grab
 }
 
+.feature-box .btn-dark {
+    float: right;
+    position: absolute;
+    right: 4rem;
+    top: 2.5rem;
+    cursor: grab;
+}
+
+form {
+    padding-top:0;
+}
+
+hr {
+    color: #000000;
+}
+
 
 /* Footer */
 .footer-icon{
@@ -185,4 +202,16 @@ a:hover {
     color:#00A0C6; 
     text-decoration:none; 
     cursor:pointer;  
+}
+
+@media (max-width: 500px) {
+
+    .feature-box .btn-dark  {
+        float: right;
+        position: absolute;
+        right: 3rem;
+        top: 1rem;
+        cursor: grab;
+        font-size: 9px;
+    }
 }

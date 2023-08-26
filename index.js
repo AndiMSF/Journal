@@ -4,6 +4,9 @@ const bodyParser = require("body-parser")
 const dotenv = require("dotenv")
 const ejs = require("ejs")
 const cookieParser = require("cookie-parser")
+const session = require("express-session")
+const flash = require("connect-flash")
+
 // Import verifyToken
 const verifyToken = require("./middleware/auth.js")
 
@@ -17,12 +20,20 @@ const deleteRoutes = require("./routes/delete.js")
 
 // Configuration
 const app = express()
+dotenv.config()
 app.use(cookieParser())
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname+ "/public"));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-dotenv.config()
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    cookie: { maxAge: 60000 },
+    saveUninitialized: false,
+    resave: false
+}))
+app.use(flash())
+
 
 // MongoDB Setup
 const connectDatabase = async () => {
